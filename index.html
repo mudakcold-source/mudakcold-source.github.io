@@ -1,110 +1,163 @@
 
-<h2 class="sr-only">Аналитика пополнений баланса за 31 день</h2>
 
-<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:1.5rem;">
-  <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:1rem;">
-    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 4px;">Общая выручка</p>
-    <p style="font-size:22px;font-weight:500;margin:0;">23 141</p>
-  </div>
-  <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:1rem;">
-    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 4px;">Уникальных плательщиков</p>
-    <p style="font-size:22px;font-weight:500;margin:0;">170</p>
-  </div>
-  <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:1rem;">
-    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 4px;">Средний чек / человек</p>
-    <p style="font-size:22px;font-weight:500;margin:0;">136.1</p>
-  </div>
-  <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:1rem;">
-    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 4px;">Всего транзакций</p>
-    <p style="font-size:22px;font-weight:500;margin:0;">245</p>
+<h2 class="sr-only">Дашборд аналитики пополнений баланса — 245 транзакций за 31 день</h2>
+<style>
+.dash-section{margin-bottom:1.5rem}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.kpi{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:14px 16px}
+.kpi-label{font-size:12px;color:var(--color-text-secondary);margin:0 0 6px;font-weight:400}
+.kpi-val{font-size:22px;font-weight:500;color:var(--color-text-primary);margin:0;line-height:1}
+.kpi-sub{font-size:11px;color:var(--color-text-tertiary);margin:4px 0 0}
+.kpi-accent{border-left:2.5px solid #1D9E75;border-radius:0 var(--border-radius-lg) var(--border-radius-lg) 0}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px}
+.proj{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 12px}
+.proj-label{font-size:11px;color:var(--color-text-secondary);margin:0 0 4px}
+.proj-val{font-size:15px;font-weight:500;color:var(--color-text-primary);margin:0}
+.section-title{font-size:12px;font-weight:500;color:var(--color-text-secondary);text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px}
+.divider{height:0.5px;background:var(--color-border-tertiary);margin:1.5rem 0}
+.top-row{display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.top-row:last-child{border-bottom:none}
+.top-rank{width:20px;font-size:12px;color:var(--color-text-tertiary);font-weight:400}
+.top-id{font-size:13px;color:var(--color-text-primary);font-family:var(--font-mono);flex:1;padding:0 8px}
+.top-bar-wrap{flex:1.5;height:6px;background:var(--color-background-secondary);border-radius:3px;overflow:hidden;margin:0 10px}
+.top-bar{height:100%;border-radius:3px;background:#1D9E75}
+.top-amt{font-size:13px;font-weight:500;color:var(--color-text-primary);min-width:36px;text-align:right}
+.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;background:#E1F5EE;color:#0F6E56;font-weight:500}
+</style>
+
+<div class="dash-section">
+  <p class="section-title">Ключевые показатели · 14 марта — 13 апреля 2026</p>
+  <div class="kpi-grid">
+    <div class="kpi kpi-accent">
+      <p class="kpi-label">Общая выручка</p>
+      <p class="kpi-val">23 141</p>
+      <p class="kpi-sub">за 31 день</p>
+    </div>
+    <div class="kpi">
+      <p class="kpi-label">Транзакций</p>
+      <p class="kpi-val">245</p>
+      <p class="kpi-sub">всего пополнений</p>
+    </div>
+    <div class="kpi">
+      <p class="kpi-label">Плательщиков</p>
+      <p class="kpi-val">170</p>
+      <p class="kpi-sub">уникальных</p>
+    </div>
+    <div class="kpi">
+      <p class="kpi-label">Средний чек / чел.</p>
+      <p class="kpi-val">136</p>
+      <p class="kpi-sub">по уникальным</p>
+    </div>
+    <div class="kpi">
+      <p class="kpi-label">Средний чек / транз.</p>
+      <p class="kpi-val">94.5</p>
+      <p class="kpi-sub">по транзакциям</p>
+    </div>
   </div>
 </div>
 
-<div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-bottom:1.5rem;">
-  <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.75rem;">
-    <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px;">День</p>
-    <p style="font-size:17px;font-weight:500;margin:0;">747</p>
-  </div>
-  <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.75rem;">
-    <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px;">Неделя</p>
-    <p style="font-size:17px;font-weight:500;margin:0;">5 225</p>
-  </div>
-  <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.75rem;">
-    <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px;">Месяц</p>
-    <p style="font-size:17px;font-weight:500;margin:0;">22 395</p>
-  </div>
-  <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.75rem;">
-    <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px;">3 месяца</p>
-    <p style="font-size:17px;font-weight:500;margin:0;">67 184</p>
-  </div>
-  <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.75rem;">
-    <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px;">6 месяцев</p>
-    <p style="font-size:17px;font-weight:500;margin:0;">134 367</p>
-  </div>
-  <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.75rem;">
-    <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px;">12 месяцев</p>
-    <p style="font-size:17px;font-weight:500;margin:0;">272 467</p>
+<div class="dash-section">
+  <p class="section-title">Прогноз выручки</p>
+  <div class="proj-grid">
+    <div class="proj"><p class="proj-label">День</p><p class="proj-val">747</p></div>
+    <div class="proj"><p class="proj-label">Неделя</p><p class="proj-val">5 225</p></div>
+    <div class="proj"><p class="proj-label">Месяц</p><p class="proj-val">22 395</p></div>
+    <div class="proj"><p class="proj-label">3 месяца</p><p class="proj-val">67 184</p></div>
+    <div class="proj"><p class="proj-label">6 месяцев</p><p class="proj-val">134 367</p></div>
+    <div class="proj"><p class="proj-label">12 месяцев</p><p class="proj-val">272 467</p></div>
   </div>
 </div>
 
-<div style="position:relative;width:100%;height:220px;margin-bottom:1.5rem;">
-  <canvas id="dailyChart" role="img" aria-label="Выручка по дням с 14 марта по 13 апреля 2026">Дневная выручка по 30 дням.</canvas>
+<div class="dash-section">
+  <p class="section-title">Выручка по дням</p>
+  <div style="position:relative;width:100%;height:200px">
+    <canvas id="c1" role="img" aria-label="Выручка по дням марта-апреля 2026">Дневная выручка.</canvas>
+  </div>
 </div>
 
-<p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 8px;">Топ-10 пользователей по сумме пополнений</p>
-<div style="position:relative;width:100%;height:320px;">
-  <canvas id="topChart" role="img" aria-label="Топ 10 пользователей по сумме пополнений">Топ пользователей.</canvas>
+<div class="divider"></div>
+
+<div class="dash-section">
+  <p class="section-title">Топ-10 плательщиков</p>
+  <div id="topList"></div>
+</div>
+
+<div class="dash-section">
+  <p class="section-title">Распределение сумм пополнений</p>
+  <div style="position:relative;width:100%;height:180px">
+    <canvas id="c2" role="img" aria-label="Распределение по диапазонам сумм">Распределение пополнений.</canvas>
+  </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
+const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+const gridColor = isDark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.06)';
+const tickColor = isDark ? '#888' : '#999';
+const barColor = '#1D9E75';
+const barColor2 = '#378ADD';
+
 const dailyLabels = ['14.03','15.03','16.03','17.03','18.03','19.03','20.03','21.03','22.03','23.03','24.03','25.03','26.03','27.03','28.03','29.03','30.03','31.03','01.04','02.04','03.04','04.04','05.04','06.04','07.04','08.04','09.04','11.04','12.04','13.04'];
 const dailyData = [1,200,200,591,1040,850,2568,2230,900,717,500,1175,1632,386,1117,1079,598,689,340,625,373,819,546,520,385,650,696,420,558,736];
 
-new Chart(document.getElementById('dailyChart'), {
+new Chart(document.getElementById('c1'), {
   type: 'bar',
   data: {
     labels: dailyLabels,
-    datasets: [{
-      label: 'Выручка',
-      data: dailyData,
-      backgroundColor: '#3266ad',
-      borderRadius: 3
-    }]
+    datasets: [{label:'Выручка',data:dailyData,backgroundColor:barColor,borderRadius:3,borderSkipped:false}]
   },
   options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: { legend: { display: false } },
-    scales: {
-      x: { ticks: { font: { size: 10 }, maxRotation: 45, autoSkip: true, maxTicksLimit: 15 } },
-      y: { ticks: { font: { size: 11 } } }
+    responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' '+ctx.parsed.y.toLocaleString()}}},
+    scales:{
+      x:{ticks:{color:tickColor,font:{size:10},maxRotation:45,autoSkip:true,maxTicksLimit:12},grid:{color:gridColor}},
+      y:{ticks:{color:tickColor,font:{size:11},callback:v=>v.toLocaleString()},grid:{color:gridColor}}
     }
   }
 });
 
-const topUsers = ['1143111397','8584024871','1820138939','959834497','5261209894','7262105763','8239033835','396349839','5423492352','6399303495'];
-const topAmounts = [629,500,500,500,500,378,340,340,339,339];
+const topUsers = [
+  {id:'1143111397',amt:629},
+  {id:'8584024871',amt:500},
+  {id:'1820138939',amt:500},
+  {id:'959834497', amt:500},
+  {id:'5261209894',amt:500},
+  {id:'7262105763',amt:378},
+  {id:'8239033835',amt:340},
+  {id:'396349839', amt:340},
+  {id:'5423492352',amt:339},
+  {id:'6399303495',amt:339}
+];
+const maxAmt = topUsers[0].amt;
+const list = document.getElementById('topList');
+topUsers.forEach((u,i)=>{
+  const pct = Math.round(u.amt/maxAmt*100);
+  list.innerHTML += `<div class="top-row">
+    <span class="top-rank">${i+1}</span>
+    <span class="top-id">${u.id}</span>
+    <div class="top-bar-wrap"><div class="top-bar" style="width:${pct}%"></div></div>
+    <span class="top-amt">${u.amt.toLocaleString()}</span>
+  </div>`;
+});
 
-new Chart(document.getElementById('topChart'), {
+new Chart(document.getElementById('c2'), {
   type: 'bar',
   data: {
-    labels: topUsers,
+    labels: ['1–50','51–100','101–200','201–300','301–500','500+'],
     datasets: [{
-      label: 'Сумма',
-      data: topAmounts,
-      backgroundColor: '#1D9E75',
-      borderRadius: 3
+      label:'Транзакций',
+      data:[62,48,71,18,38,8],
+      backgroundColor:barColor2,
+      borderRadius:3,
+      borderSkipped:false
     }]
   },
   options: {
-    indexAxis: 'y',
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: { legend: { display: false } },
-    scales: {
-      x: { ticks: { font: { size: 11 } } },
-      y: { ticks: { font: { size: 11 } } }
+    responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' '+ctx.parsed.y+' транз.'}}},
+    scales:{
+      x:{ticks:{color:tickColor,font:{size:11}},grid:{color:gridColor}},
+      y:{ticks:{color:tickColor,font:{size:11}},grid:{color:gridColor}}
     }
   }
 });
